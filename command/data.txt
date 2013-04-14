@@ -1,0 +1,10 @@
+d foo
+f foo/bar
+
+save
+f foo/buz
+fail
+d x
+f x/y
+
+!f foo/bar

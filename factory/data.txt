@@ -1,0 +1,7 @@
+d foo
+f foo/bar
+f foo/buz
+d x
+f x/y
+
+!f foo/bar

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Text Wrappers</title>
+<link rel="stylesheet" href="static/bootstrap/css/bootstrap.css" />
+<style>
+  textarea { width: 100%; }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h1>TextWrap Demo</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <textarea cols="80"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span2">
+        <button>Wrap Text</button>
+      </div>
+      <div class="span4">
+        <select id="algorithm">
+          <option value="Text::Wrap">Text::Wrap</option>
+          <option value="Text::Wrapper">Text::Wrapper</option>
+          <option value="Text::ASCIITable::Wrap">Text::ASCIITable::Wrap</option>
+        </select>
+      </div>
+      <div class="span4">
+        <label>
+          Columns
+          <input type="number" value="40" id="col" />
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <p class="result"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="static/js/jquery-1.9.1.min.js"></script>
+  <script src="static/js/wrap.js"></script>
+</body>
+</html>
