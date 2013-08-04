@@ -2,6 +2,15 @@ use strict;
 use warnings;
 use v5.14;
 
+my $LICENSE_DATA = <<END;
+- angrybirds
+- zombies
+-
+  - foo
+  - bar
+  - buz
+END
+
 package SoftwareLicense;
 use Moose;
 
@@ -30,7 +39,7 @@ sub build_licenses {
 sub check_license {
 }
 
-my $yml = YAML::Tiny->read('demo2.yml') or die YAML::Tiny->errstr;
+my $yml = YAML::Tiny->read_string( $LICENSE_DATA ) or die YAML::Tiny->errstr;
 my $data_ref = shift @$yml;
 my $product  = shift @ARGV;
 
